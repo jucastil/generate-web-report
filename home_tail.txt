@@ -1,0 +1,32 @@
+  ]
+    }]
+});
+chart.render();
+
+}
+
+
+
+
+</script>
+</head>
+<body>
+
+<div align="center">
+ <h1 >Dept. Structural Biology</h1>
+ <img src="mpibp_logo_webnotext.gif" alt="MPIBP logo"></div>
+ <div align="center"><H1><B>SB Online Monitor: SB HOME User Impact</B></H1>
+<br> 
+<input type="button" style="background-color:lime; padding: 10px; border:none;" onClick="window.location ='http://sbdoc.sb.biophys.mpg.de/data/'" value="Back to main"/> 
+<input type="button" style="background-color:yellow; padding: 10px; border:none;" onClick="window.location ='sbdata_bubbles.php'" value="SBDATA bubbles"/> <input type="button" style="background-color:Aqua; padding: 10px; border:none;" onClick="window.location ='http://sbdoc.sb.biophys.mpg.de/data/cryo/index.php'" value="CRYO bubbles"/>
+
+
+ <h2>Tue May 21 11:40:01 CEST 2019</h2>
+ <br>
+
+
+<div id="chartCloudSBDATA" style="height: 500px; width: 80%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
+
