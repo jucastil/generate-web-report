@@ -1,0 +1,27 @@
+ ]
+    }]
+});
+chart.render();
+
+var chart2 = new CanvasJS.Chart("chartCloudHOME", {
+    animationEnabled: true,
+    zoomEnabled: true,
+    theme: "light2",
+    title:{
+        text: "User Impact : SBDATA"
+    },
+    axisX: {
+        title:"SDATA usage (in Gb)",
+        minimum: -10000,
+        maximum: 130000,
+        gridThickness: 1
+    },
+    axisY:{
+        title: "SBDATA inodes",
+        minimum: -500000,
+	maximum: 2500000
+    },
+    data: [{
+        type: "bubble",
+        toolTipContent: "<b>{name}</b><br/>SBDATA: {x} (GB)<br/> SBDATA: {y}(inodes) <br/> N small files: {z}",
+        dataPoints: [
