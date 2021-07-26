@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>SB data usage</title>
+		<script src="sorttable.js"></script>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="poll.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style>
+		table { border-collapse: collapse; width: 100%;}
+		th, td { text-align: left; padding: 8px; }
+		tr:nth-child(even) {background-color: #f2f2f2;}
+	</style>
+	
+	
+	<style>
+	* {
+  		box-sizing: border-box;
+	  }
+
+	  #myInput {
+  		background-image: url('searchicon.png');
+  		background-position: 10px 10px;
+ 		 background-repeat: no-repeat;
+  		width: 100%;
+  		font-size: 16px;
+  		padding: 12px 20px 12px 40px;
+  		border: 1px solid #ddd;
+  		margin-bottom: 12px;
+	  }
+
+	  #myTable {
+  		border-collapse: collapse;
+  		width: 100%;
+  		border: 1px solid #ddd;
+  		font-size: 18px;
+	  }
+
+	  #myTable th, #myTable td {
+  		text-align: left;
+  		padding: 12px;
+	  }
+
+	  #myTable tr {
+ 		 border-bottom: 1px solid #ddd;
+	  }
+
+	  #myTable tr.header, #myTable tr:hover {
+  		background-color: #f1f1f1;
+	  }
+	</style>
+	
+	
+	<script>
+		function myFunction() {
+  			var input, filter, table, tr, td, i, txtValue;
+  			input = document.getElementById("myInput");
+  			filter = input.value.toUpperCase();
+  			table = document.getElementById("myTable");
+  			tr = table.getElementsByTagName("tr");
+  			for (i = 0; i < tr.length; i++) {
+    				td = tr[i].getElementsByTagName("td")[0];
+    				if (td) {
+      					txtValue = td.textContent || td.innerText;
+      					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        					tr[i].style.display = "";
+      					} else {
+        					tr[i].style.display = "none";
+      					}
+    				}       
+  			}
+		}
+	</script>	
+	
+	
+<div id="container">
+			
+
+	<DIV ALIGN="center">
+	<h1 >Dept. Structural Biology</h1>
+	<img src="mpibp_logo_webnotext.gif" alt="MPIBP logo"></DIV>
+	<DIV ALIGN="center"><H1><B>SB data usage</B><br> <input type="button" style="background-color:Aqua; padding: 10px; border:none;" onClick="window.location ='http://sbmunin.sb.biophys.mpg.de/munin/server/log03.server/df_inode.html'" value="Show inode trends"/> <input type="button" style="background-color:yellow; padding: 10px; border:none;" onClick="window.location ='view/index.html'" value="Show pie charts"/> <input type="button" style="background-color:lime; padding: 10px; border:none;" onClick="window.location ='bubbles/local_bubbles.php'" value="Show LOCAL bubbles"/> <input type="button" style="background-color:clearblue; padding: 10px; border:none;" onClick="window.location ='cryo/index.php'" value="Show CRYO data"/>
+	<input type="text" style="height:35px; width:200px; font-family: Arial, Helvetica, sans-serif;" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"></H1>
+	<h2>Last update: Tue Sep  1 13:21:52 CEST 2020 </h2>
+	<h2>Click on one column to order. Number of files: 
+	
+	<svg width="20" height="20"> <rect width="20" height="20" margin="5" style="fill:#990000;stroke-width:3;stroke:rgb(0,0,0)" /> </svg> N > 3M 
+	<svg width="20" height="20"> <rect width="20" height="20" margin="5" style="fill:Red;stroke-width:3;stroke:rgb(0,0,0)" /> </svg> N > 2M 
+	<svg width="20" height="20"> <rect width="20" height="20" margin="5" style="fill:DarkOrange;stroke-width:3;stroke:rgb(0,0,0)" /> </svg> N > 1M 
+	<svg width="20" height="20"> <rect width="20" height="20" margin="5" style="fill:Gold;stroke-width:3;stroke:rgb(0,0,0)" /> </svg> N> 0.5M 
+	
+	</h2>
+	<br>
+
+	
+</div>
+
+<DIV ALIGN="center">
+<hr>
+<br>
+<br>
+
+ <table class="sortable" id="myTable" style=" float: center; font-size:medium; border: 1px solid #e3e3e3; background-color: #f2f2f2; width: 80%; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px; margin:0 10px; ">
+
