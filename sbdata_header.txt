@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>SB Cloud Monitor</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script>
+window.onload = function () {
+var chart = new CanvasJS.Chart("chartCloudSBDATA", {
+    animationEnabled: true,
+    zoomEnabled: true,
+    theme: "light2",
+    title:{
+        text: "User Impact : SB DATA"
+    },
+    axisX: {
+        title:"SB DATA usage (in Gb)",
+        minimum: -10000,
+        maximum: 130000,
+        gridThickness: 1
+    },
+    axisY:{
+        title: "SB DATA inodes",
+        minimum: -500000,
+        maximum: 3000000,
+    },
+    data: [{
+        type: "bubble",
+        toolTipContent: "<b>{name}</b><br/>SB DATA: {x} (GB)<br/> SB DATA: {y}(inodes) <br/> N small files: {z}",
+        dataPoints: [
